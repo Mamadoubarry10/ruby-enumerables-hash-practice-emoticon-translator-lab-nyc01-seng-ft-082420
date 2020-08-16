@@ -32,6 +32,19 @@ end
 output
 end
 
-def get_english_meaning
+def get_english_meaning(path,emoticon)
+  # code goes here
+  output = ""
+  apology = "Sorry, that emoticon was not found"
+  libaray = load_library(path)
+  libaray.each do |m,v|
+    if emoticon == v[:japanese]
+      output = m
+    end
+    if output == ""
+      output = apology
+    end
+end
+output
   # code goes here
 end
