@@ -16,6 +16,20 @@ end
 
 def get_japanese_emoticon
   # code goes here
+    # code goes here
+  output = ""
+  apology = "Sorry, that emoticon was not found"
+  libaray = load_library(path)
+  libaray.each do |m,v|
+    if emoticon == v[:english]
+      output = v[:japanese]
+    end
+    if output == ""
+      output = apology
+    end
+  #binding.pry
+end
+output
 end
 
 def get_english_meaning
