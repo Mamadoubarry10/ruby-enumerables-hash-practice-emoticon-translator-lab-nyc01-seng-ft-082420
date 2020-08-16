@@ -1,6 +1,6 @@
 # require modules here
 
-def load_library
+def load_library(file)
     # code goes here
   data = YAML.load_file(file)
   result = data.each_with_object({}) do |(icon, value),final_hash|
@@ -14,7 +14,7 @@ def load_library
 end
 end
 
-def get_japanese_emoticon
+def get_japanese_emoticon(path,emoticon)
   # code goes here
     # code goes here
   output = ""
